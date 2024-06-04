@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gericht</title>
+    <!-- the import of the fonts and animations here  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+     <!-- the import and end of animation and fonts here  -->
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    *{
+      font-family: 'Quicksand', sans-serif;
+    }
+    .neue {
+      font-family: "Comic Neue", cursive;
+      /* font-weight: 400; */
+    }
+
+    .corner-border {
+  position: relative;
+}
+
+.corner-border::before,
+.corner-border::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid #fff;
+}
+
+.corner-border::before {
+  top: 0;
+  left: 0;
+  border-top-width: 4px;
+  border-left-width: 4px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+}
+
+.corner-border::after {
+  bottom: 0;
+  right: 0;
+  border-top-width: 0px;
+  border-left-width: 0;
+  border-right-width: 4px;
+  border-bottom-width: 4;
+}
+
+
+.relative img {
+  position: relative;
+  z-index: 0; /* Ensure image is below the borders */
+}
+
+.corner-border::before,
+.corner-border::after {
+  z-index: 1; /* Ensure borders appear above the image */
+}
+
+  </style>
+</head>
+<body class="bg-black text-white">
+  <nav class="w-full flex justify-between items-center bg-black py-4 px-8" data-aos-delay="20" data-aos="fade-in">
+    <div class="flex justify-start items-center">
+      <img src="./images/gerich.png" alt="app logo" class="w-36 md:w-28">
+    </div>
+    <ul class="hidden md:flex flex-1 justify-center items-center list-none">
+      <li class="mx-4 cursor-pointer"><a href="./index.html" class="hover:text-gray-400">Home</a></li>
+      <li class="mx-4 cursor-pointer"><a href="./menu.html" class="hover:text-gray-400">About</a></li>
+      <li class="mx-4 cursor-pointer"><a href="./menu.html" class="hover:text-gray-400">Menu</a></li>
+     <li class="mx-4 cursor-pointer"><a href="./contact.html" class="hover:text-gray-400">Contact</a></li>
+    </ul>
+    <div class="hidden md:flex justify-end items-center">
+      <a href="#login" class="mx-4 hover:border-b border-gold transition duration-500">Log In / Register</a>
+      <a href="/" class="mx-4 hover:border-b border-gold transition duration-500">Book Table</a>
+    </div>
+    <div class="md:hidden flex">
+      <button id="menu-btn" class="text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="menu-overlay" class="hidden fixed inset-0 bg-black flex flex-col justify-center items-center z-50 transition duration-500">
+    <button id="close-menu" class="text-golden text-2xl absolute top-5 right-5">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="list-none text-golden text-center text-2xl">
+      <li class="my-8"><a href="./index.html" class="hover:text-white">Home</a></li>
+      <li class="my-8"><a href="./about.html" class="hover:text-white">About</a></li>
+      <li class="my-8"><a href="./menu.html" class="hover:text-white">Menu</a></li>
+          <li class="my-8"><a href="./contact.html" class="hover:text-white">Contact</a></li>
+    </ul>
+  </div>
+<section class="flex flex-col md:flex-row md:space-x-10 mt-20 ml-10">
+
+  <div class="relative mb-8 md:mb-0 w-96 h-96 ml-10 md:ml-0 " data-aos="fade-down">
+    <div class="relative w-full h-full corner-border p-4">
+      <img src="./images/kofe.jpg" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-400">
+        <p class="neue text-white text-xl font-serif text-center" data-aos="fade-down">Coffee is among our <span class="text-red-400">delicious</span> drinks</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="relative mb-8 md:mb-0 w-96 h-96 ml-10 md:ml-0 md:mt-20" data-aos="fade-up">
+      <div class="relative w-full h-full corner-border p-4">
+        <img src="./images/ofe.avif" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <p class="neue text-white text-xl font-serif text-center">The safest and <span class="text-red-400">healthiest</span> drink</p>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="relative mb-8 md:mb-0 w-96 h-96 ml-10 md:ml-0" data-aos="fade-down">
+      <div class="relative w-full h-full corner-border p-4">
+        <img src="./images/fe.jpg" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-400">
+          <p class="neue text-white text-xl font-serif text-center" data-aos="fade-down">The <span class="text-red-400">sweetest</span> and better drink</p>
+        </div>
+      </div>
+    </div>
+    
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init(
+        {
+            duration: 900,
+            once: true
+        }
+    );
+    const menuBtn = document.getElementById('menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuBtn.addEventListener('click', () => {
+      menuOverlay.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      menuOverlay.classList.add('hidden');
+    });
+</script>
+</body>
+</html>

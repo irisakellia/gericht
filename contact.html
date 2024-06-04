@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gericht</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="bg-black text-white">
+  <nav class="w-full flex justify-between items-center bg-black py-4 px-8">
+    <div class="flex justify-start items-center">
+      <img src="./images/gerich.png" alt="app logo" class="w-36 md:w-28">
+    </div>
+    <ul class="hidden md:flex flex-1 justify-center items-center list-none">
+      <li class="mx-4 cursor-pointer"><a href="./index.html" class="hover:text-gray-400">Home</a></li>
+      <li class="mx-4 cursor-pointer"><a href="./about.html" class="hover:text-gray-400">About</a></li>
+      <li class="mx-4 cursor-pointer"><a href="./menu.html" class="hover:text-gray-400">Menu</a></li>
+     <li class="mx-4 cursor-pointer"><a href="./contact.html" class="hover:text-gray-400">Contact</a></li>
+    </ul>
+    <div class="hidden md:flex justify-end items-center">
+      <a href="#login" class="mx-4 hover:border-b border-gold transition duration-500">Log In / Register</a>
+      <a href="/" class="mx-4 hover:border-b border-gold transition duration-500">Book Table</a>
+    </div>
+    <div class="md:hidden flex">
+      <button id="menu-btn" class="text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <div id="menu-overlay" class="hidden fixed inset-0 bg-black flex flex-col justify-center items-center z-50 transition duration-500">
+    <button id="close-menu" class="text-golden text-2xl absolute top-5 right-5">
+      <i class="fas fa-times"></i>
+    </button>
+    <ul class="list-none text-golden text-center text-2xl">
+      <li class="my-8"><a href="./index.html" class="hover:text-white">Home</a></li>
+      <li class="my-8"><a href="./about.html" class="hover:text-white">About</a></li>
+      <li class="my-8"><a href="./menu.html" class="hover:text-white">Menu</a></li>
+          <li class="my-8"><a href="./contact.html" class="hover:text-white">Contact</a></li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center justify-center p-5 mt-5 w-full">
+    <div class=" rounded-lg shadow-lg w-1/2 flex justify-center text-white items-center ">
+      <div class="mt-6 flex flex-col justify-center items-center w-1/2 ">
+        <img src="./images/gerich.png" alt="gerich logo" class="w-40 md:w-28" />
+        <p class="text-5xl font-serif font-bold text-center">Get in <span class="text-orange-600">Touch</span></p>
+        <p class="font-medium text-sm">Contact us via:</p>
+        <p class="text-xs text-red-400 mt-2">gerichcafe@gmail.com</p>
+      </div>
+      <form class="mt-6 w-1/2">
+        <div class="flex flex-col">
+          <label class="text-sm mb-1">FULL NAME</label>
+          <input type="text" placeholder="ex. John Carter" class="border border-red-400 rounded-lg h-10 px-4 mb-4" />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-sm mb-1">EMAIL ADDRESS</label>
+          <input type="email" placeholder="example@gmail.com" class="border border-red-500 rounded-lg h-10 px-4 mb-4" />
+        </div>
+        <div class="flex flex-col">
+          <label class="text-sm mb-1">PHONE</label>
+          <input type="tel" placeholder="(250) 79 13 22 055" class="border border-red-500 rounded-lg h-10 px-4 mb-4" />
+        </div>
+        <!-- <div class="flex flex-col">
+          <label class="text-sm mb-1">ORDER</label>
+          <input type="text" placeholder="ex. coffee" class="border border-red-500 rounded-lg h-10 px-4 mb-4" />
+        </div> -->
+        <div class="flex flex-col">
+          <label class="text-sm mb-1">LEAVE US A MESSAGE</label>
+          <textarea placeholder="Please type your message here ..." class="border border-red-500 rounded-lg h-24 px-4 py-2 mb-4"></textarea>
+        </div>
+        <button type="submit" class="bg-red-500 text-white rounded-lg py-2 px-6 w-full">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuBtn.addEventListener('click', () => {
+      menuOverlay.classList.remove('hidden');
+    });
+
+    closeMenu.addEventListener('click', () => {
+      menuOverlay.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
