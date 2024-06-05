@@ -4,8 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gericht</title>
+  <!-- the import of the fonts and animations here  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <!-- the import and end of animation and fonts here  -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    *{
+      font-family: 'Quicksand', sans-serif;
+    }
+    .neue {
+      font-family: "Comic Neue", cursive;
+      /* font-weight: 400; */
+    }
+
+  </style>
+
 </head>
 <body class="bg-black text-white">
   <nav class="w-full flex justify-between items-center bg-black py-4 px-8">
@@ -40,14 +60,49 @@
     </ul>
   </div>
   <div class="flex flex-col items-center justify-center p-5 mt-5 w-full">
-    <div class=" rounded-lg shadow-lg w-1/2 flex justify-center text-white items-center ">
-      <div class="mt-6 flex flex-col justify-center items-center w-1/2 ">
-        <img src="./images/gerich.png" alt="gerich logo" class="w-40 md:w-28" />
-        <p class="text-5xl font-serif font-bold text-center">Get in <span class="text-orange-600">Touch</span></p>
-        <p class="font-medium text-sm">Contact us via:</p>
-        <p class="text-xs text-red-400 mt-2">gerichcafe@gmail.com</p>
+    <div class=" rounded-lg shadow-lg w-full flex flex-col flex-col-reverse justify-center text-white items-center space-x-4 md:flex-row md:w-3/4">
+      <div class="mt-6 hidden justify-center items-center w-1/2  md:flex md:flex-col">
+        <!-- <img src="./images/gerich.png" alt="gerich logo" class="w-40 md:w-28" /> -->
+        
+        <div class="w-3/4 flex flex-col space-y-14">
+          <div class="flex space-x-3 items-center " data-aos="fade-up">
+            <div class="bg-red-500 w-14 h-14 flex justify-center items-center  rounded-full">
+              <i class="fa fa-map-marker text-xl text-black  " aria-hidden="true"></i>
+              <!-- <img class="fit-cover w-10 " src="./images/telephone.png" alt="phone" /> -->
+            </div>
+            <div class="text-white ">
+              <div class="text-xl font-bold">Location : </div>
+              <div class="text-md font-light">Kigali, Rwanda</div>
+            </div>
+         </div>
+
+             <div class="flex space-x-3 items-center" data-aos="fade-up" >
+                <div class="bg-red-500 w-14 h-14 flex justify-center items-center  rounded-full">
+                  <i class="fa fa-envelope text-xl text-black  " aria-hidden="true"></i>
+                  <!-- <img class="fit-cover w-10 " src="./images/telephone.png" alt="phone" /> -->
+                </div>
+                <div class="text-white ">
+                  <div class="text-xl font-bold">Email : </div>
+                  <div class="text-md font-light">jazzybruno45@gmail.com</div>
+                </div>
+             </div>
+
+
+           <div class="flex space-x-3 items-center" data-aos="fade-up">
+            <div class="bg-red-500 w-14 h-14 flex justify-center items-center  rounded-full">
+              <i class="fa fa-phone text-xl text-black fa-rotate-90 " aria-hidden="true"></i>
+              <!-- <img class="fit-cover w-10 " src="./images/telephone.png" alt="phone" /> -->
+            </div>
+            <div class="text-white ">
+              <div class="text-xl font-bold">Phone Number : </div>
+              <div class="text-md font-light">0784042344</div>
+            </div>
+         </div>
+        </div>
       </div>
-      <form class="mt-6 w-1/2">
+      <div class="mt-6 w-1/2 flex flex-col space-y-5" data-aos="fade-down">
+        <p class="text-4xl font-serif font-bold text-center">Get in <span class="text-orange-600">Touch</span></p>
+      <form class="">
         <div class="flex flex-col">
           <label class="text-sm mb-1">FULL NAME</label>
           <input type="text" placeholder="ex. John Carter" class="border border-red-400 rounded-lg h-10 px-4 mb-4" />
@@ -70,11 +125,19 @@
         </div>
         <button type="submit" class="bg-red-500 text-white rounded-lg py-2 px-6 w-full">Submit</button>
       </form>
+      </div>
     </div>
   </div>
 
   
-  <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init(
+        {
+            duration: 900,
+            once: true
+        }
+    );
     const menuBtn = document.getElementById('menu-btn');
     const menuOverlay = document.getElementById('menu-overlay');
     const closeMenu = document.getElementById('close-menu');
